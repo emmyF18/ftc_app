@@ -21,8 +21,6 @@ import com.qualcomm.robotcore.util.ElapsedTime;
     {
 
     }
-
-
     public void moveForward (double power, long time)
     {
 
@@ -39,8 +37,8 @@ import com.qualcomm.robotcore.util.ElapsedTime;
     }
     public void moveUsingEncoders(int moveValue, double power)
     {
-        motorRight.setChannelMode(DcMotorController.RunMode.RUN_TO_POSITION);
-        motorLeft.setChannelMode(DcMotorController.RunMode.RUN_TO_POSITION);
+        motorRight.setMode(DcMotorController.RunMode.RUN_TO_POSITION);
+        motorLeft.setMode(DcMotorController.RunMode.RUN_TO_POSITION);
         motorRight.setTargetPosition(moveValue);
         motorLeft.setTargetPosition(moveValue);
         motorLeft.setPower(power);
