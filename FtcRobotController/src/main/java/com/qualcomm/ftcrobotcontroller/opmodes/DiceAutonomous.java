@@ -18,6 +18,8 @@ public class DiceAutonomous extends LinearOpMode
     //ColorSensor cSensor = robot.getColorSensor();
     //DcMotor buttonLeft = robot.getButtonRight();
     ///DcMotor buttonRight = robot.getButtonLeft();
+    //DcMotor lift = robot.getMotorLift();
+    //DcMotor Winch = robot.getMotorWinch();
 
     public void runOpMode() throws InterruptedException
     {
@@ -51,7 +53,8 @@ public class DiceAutonomous extends LinearOpMode
                 motorRight.setPower(0);
 
             }
-       */ }
+       */
+        }
 
 
     }

@@ -17,15 +17,12 @@ import com.qualcomm.robotcore.util.ElapsedTime;
     ColorSensor cSensor = hardwareMap.colorSensor.get("cSensor");
     DcMotor buttonLeft = hardwareMap.dcMotor.get("buttonLeft");
     DcMotor buttonRight = hardwareMap.dcMotor.get("buttonRight");
-    public void runOpMode()
-    {
-
-    }
+    DcMotor lift = hardwareMap.dcMotor.get("lift");
+    DcMotor Winch = hardwareMap.dcMotor.get("Winch");
+    public void runOpMode() {}
     public void moveForward (double power, long time)
     {
-
         ElapsedTime eTime = new ElapsedTime();
-
         while (eTime.time() < time)
         {
             motorLeft.setPower(power);
@@ -33,7 +30,6 @@ import com.qualcomm.robotcore.util.ElapsedTime;
         }
         motorLeft.setPower(0);
         motorRight.setPower(0);
-
     }
     public void moveUsingEncoders(int moveValue, double power)
     {
@@ -64,10 +60,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
     public double getColorAlpha() { return cSensor.alpha(); }
     public double getColorBlue() { return cSensor.blue(); }
     public double getColorRed() { return cSensor.red(); }
-    public DcMotor getMotorLeft()
-    {
-        return motorLeft;
-    }
+    public DcMotor getMotorLeft() {return motorLeft;}
     public DcMotor getMotorRight()
     {
         return motorRight;
@@ -75,4 +68,6 @@ import com.qualcomm.robotcore.util.ElapsedTime;
     public DcMotor getButtonLeft() { return buttonLeft; }
     public DcMotor getButtonRight() { return buttonRight; }
     public ColorSensor getColorSensor() { return cSensor; }
+    public DcMotor getLiftMotor() {return lift;}
+    public DcMotor getWinchMotor() {return Winch;}
 }
